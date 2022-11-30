@@ -6,10 +6,8 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Cuentas")
 public class Cuentas {
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     public int id;
     @ColumnInfo(name = "nombre")
     public String nombre;
-    @ColumnInfo(name = "saldo")
-    public int saldo;
 }

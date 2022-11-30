@@ -13,18 +13,18 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface MovimientoServices {
-    @GET("cuentas/:id/movimientos")
+    @GET("cuentas/{id}/movimientos")
     Call<Movimientos> finById(@Path("movimientosId") int id);
 
-    @GET("cuentas/:id/movimientos")
-    Call<List<Movimientos>> get();
+    @GET("cuentas/{id}/movimientos")
+    Call<List<Movimientos>> get(@Path("id") int id);
 
-    @POST("cuentas/:id/movimientos")
-    Call<Movimientos> create(@Body Movimientos movimientos);
+    @POST("cuentas/{id}/movimientos")
+    Call<Movimientos> create(@Path("id") int id, @Body Movimientos movimientos);
 
-    @PUT("cuentas/:id/movimientos/:id")
+    @PUT("cuentas/{id}/movimientos/{id}")
     Call<Movimientos> update(@Path("id") int id, @Body Movimientos movimientos);
 
-    @DELETE("cuentas/:id/movimientos/:id")
+    @DELETE("cuentas/{id}/movimientos/{id}")
     Call<Movimientos> delete(@Path("id") int id);
 }

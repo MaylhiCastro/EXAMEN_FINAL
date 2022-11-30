@@ -8,10 +8,12 @@ import androidx.room.PrimaryKey;
 public class Movimientos {
     @PrimaryKey(autoGenerate = true)
     public int id;
+    @ColumnInfo(name = "cuentaId")
+    public int cuentaId;
     @ColumnInfo(name = "tipo")
     public String tipo;
     @ColumnInfo(name = "monto")
-    public int monto;
+    public double monto;
     @ColumnInfo(name = "motivo")
     public String motivo;
     @ColumnInfo(name = "imagen")

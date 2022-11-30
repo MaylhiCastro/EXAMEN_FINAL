@@ -21,9 +21,9 @@ public interface CuentaServices {
     @POST("cuentas")
     Call<Cuentas> create(@Body Cuentas cuentas);
 
-    @PUT("cuentas/{id}")
+    @PUT("cuentas/id")
     Call<Cuentas> update(@Path("id") int id, @Body Cuentas cuentas);
 
-    @DELETE("cuentas/{id}")
+    @DELETE("cuentas/id")
     Call<Cuentas> delete(@Path("id") int id);
 }
